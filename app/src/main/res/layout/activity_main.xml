@@ -1,18 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.siamsot.lotrquiz.MainActivity">
+    android:layout_height="match_parent">
+    <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="vertical">
+          <TextView
+           style="@style/QuestionText"
+           android:text="@string/question1"
+           />
 
-    <TextView
-        android:layout_width="wrap_content"
+    <RadioGroup
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-</android.support.constraint.ConstraintLayout>
+        android:orientation="vertical"
+        android:paddingLeft="30dp">
+        <RadioButton android:id="@+id/radio_pirates"
+            style="@style/RadioQuestion"
+            android:text="@string/aragorn"
+            android:onClick="onRadioButtonClicked"/>
+        <RadioButton android:id="@+id/radio_ninjas"
+            style="@style/RadioQuestion"
+            android:text="@string/boromir"
+            android:onClick="onRadioButtonClicked"/>
+    </RadioGroup>
+    </LinearLayout>
+</ScrollView>
