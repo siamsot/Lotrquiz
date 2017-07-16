@@ -7,24 +7,83 @@
        android:layout_width="match_parent"
        android:layout_height="wrap_content"
        android:orientation="vertical">
-          <TextView
+        <TextView
            style="@style/QuestionText"
            android:text="@string/question1"
            />
-
-    <RadioGroup
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:paddingLeft="30dp">
-        <RadioButton android:id="@+id/radio_pirates"
+            <RadioGroup
+            style="@style/RadioGroup">
+            <RadioButton android:id="@+id/radio_pirates"
+                style="@style/RadioQuestion"
+                android:text="@string/aragorn"
+                android:onClick="onRadioButtonClicked"/>
+            <RadioButton android:id="@+id/radio_ninjas"
+                style="@style/RadioQuestion"
+                android:text="@string/boromir"
+                android:onClick="onRadioButtonClicked"/>
+            </RadioGroup>
+        <TextView
+            style="@style/QuestionText"
+            android:text="@string/question2"/>
+        <EditText
+            android:id="@+id/moria_answer"
+            style="@style/QuestionInput"
+            android:hint="@string/answer"
+            android:inputType="text"
+            android:textSize="15sp"/>
+            /><TextView
+        style="@style/QuestionText"
+        android:text="@string/question3"
+        />
+        <CheckBox
+            android:id="@+id/elrond"
+            style="@style/CheckAnswer"
+            android:text="@string/elrond"/>
+        <CheckBox
+            android:id="@+id/aragorn"
+            style="@style/CheckAnswer"
+            android:text="@string/aragorn"/>
+        <CheckBox
+            android:id="@+id/boromir"
+            style="@style/CheckAnswer"
+            android:text="@string/boromir"/>
+        <TextView
+        style="@style/QuestionText"
+        android:text="@string/question4"
+        />
+        <EditText
+            android:id="@+id/frodo_answer"
+            style="@style/QuestionInput"
+            android:hint="@string/answer"
+            android:inputType="text"
+            android:textSize="15sp"/>
+        <TextView
+        style="@style/QuestionText"
+        android:text="@string/question5"
+        />              <RadioGroup
+        style="@style/RadioGroup">
+        <RadioButton android:id="@+id/nazguls_right"
             style="@style/RadioQuestion"
-            android:text="@string/aragorn"
+            android:text="9"
             android:onClick="onRadioButtonClicked"/>
-        <RadioButton android:id="@+id/radio_ninjas"
+        <RadioButton android:id="@+id/nazguls_wrong"
             style="@style/RadioQuestion"
-            android:text="@string/boromir"
+            android:text="6"
             android:onClick="onRadioButtonClicked"/>
-    </RadioGroup>
+    </RadioGroup>        <TextView
+        style="@style/QuestionText"
+        android:text="@string/question6"
+        />
+        <RadioGroup
+            style="@style/RadioGroup">
+            <RadioButton android:id="@id/ring_true"
+                style="@style/RadioQuestion"
+                android:text="@string/onering"
+                android:onClick="onRadioButtonClicked"/>
+            <RadioButton android:id="@+id/ring_false"
+                style="@style/RadioQuestion"
+                android:text="@string/allrings"
+                android:onClick="onRadioButtonClicked"/>
+        </RadioGroup>
     </LinearLayout>
 </ScrollView>
