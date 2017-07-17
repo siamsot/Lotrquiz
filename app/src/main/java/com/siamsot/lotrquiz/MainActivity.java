@@ -6,7 +6,9 @@ import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioButton;
-import android.widget.TextView;
+import android.widget.Toast;
+
+import java.util.Objects;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -16,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
     public int Score = 0;
-private void displayScore (){
+public void submitScore (View view){
     RadioButton boromir1 = (RadioButton) findViewById(R.id.boromir1);
     boolean question1 = boromir1.isChecked();
 
@@ -37,26 +39,30 @@ private void displayScore (){
 
     RadioButton ring = (RadioButton) findViewById(R.id.ring_true);
     boolean question6 = ring.isChecked();
+
+    Score = calculateScore(question1, moria_pass, question3a, question3b, frodo_surname, question5, question6);
+    Toast.makeText(this, "Your final score is " + Score, Toast.LENGTH_LONG).show();
 }
-private int calculateScore (boolean q1, String q2, boolean q3, String q4, boolean q5, boolean q6) {
+private int calculateScore (boolean q1, String q2, boolean q3a, boolean q3b, String q4, boolean q5, boolean q6) {
+    int Score2 = 0;
     if (q1){
-        Score = Score + 1;
+        Score2 = Score2 + 1;
     }
-    if (q2 == "Mellon") {
-        Score = Score + 1;
+    if (Objects.equals(q2, "Mellon")) {
+        Score2 = Score2 + 1;
     }
-    if (q3){
-        Score = Score + 1;
+    if (q3a && q3b){
+        Score2 = Score2 + 1;
     }
-    if (q4 == "Baggins"){
-        Score = Score + 1;
+    if (Objects.equals(q4, "Baggins")){
+        Score2 = Score2 + 1;
     }
     if (q5){
-        Score = Score + 1;
+        Score2 = Score2 + 1;
     }
     if (q6){
-        Score = Score + 1;
+        Score2 = Score2 + 1;
     }
-    return Score;
+    return Score2;
 }
 }

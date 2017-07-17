@@ -15,12 +15,10 @@
             style="@style/RadioGroup">
             <RadioButton android:id="@+id/aragorn1"
                 style="@style/RadioQuestion"
-                android:text="@string/aragorn"
-                android:onClick="onRadioButtonClicked"/>
+                android:text="@string/aragorn"/>
             <RadioButton android:id="@+id/boromir1"
                 style="@style/RadioQuestion"
-                android:text="@string/boromir"
-                android:onClick="onRadioButtonClicked"/>
+                android:text="@string/boromir"/>
             </RadioGroup>
         <TextView
             style="@style/QuestionText"
@@ -85,6 +83,7 @@
         android:id="@+id/submit_score"
         style="@style/OrderButton"
         android:text="@string/submit"
- />
+        android:onClick="submitScore"
+    />
     </LinearLayout>
 </ScrollView>
