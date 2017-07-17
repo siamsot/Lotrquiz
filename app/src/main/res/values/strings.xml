@@ -1,7 +1,8 @@
 <resources>
     <string name="app_name">Lotr quiz</string>
     <string name="aragorn">Aragorn</string>
-    <string name="answer">Answer</string>
+    <string name="answer1">Annon edhellen, edro hi ammen.</string>
+    <string name="answer2">Answer</string>
     <string name="boromir">Boromir</string>
     <string name="question1">Who was the character that tried to steal the ring from Frodo?</string>
     <string name="question2">What was the password to enter Moria?</string>
@@ -14,5 +15,6 @@
     <string name="onering">The One ring</string>
     <string name="allrings">All the rings</string>
     <string name="submit">submit score</string>
+    <string name="legolas">Legolas</string>
 
 </resources>
