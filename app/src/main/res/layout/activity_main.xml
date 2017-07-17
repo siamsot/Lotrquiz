@@ -76,7 +76,7 @@
         />
         <RadioGroup
             style="@style/RadioGroup">
-            <RadioButton android:id="@id/ring_true"
+            <RadioButton android:id="@+id/ring_true"
                 style="@style/RadioQuestion"
                 android:text="@string/onering"
                 android:onClick="onRadioButtonClicked"/>
@@ -85,5 +85,10 @@
                 android:text="@string/allrings"
                 android:onClick="onRadioButtonClicked"/>
         </RadioGroup>
+    <Button
+        android:id="@+id/submit_score"
+        style="@style/OrderButton"
+        android:text="@string/submit"
+ />
     </LinearLayout>
 </ScrollView>

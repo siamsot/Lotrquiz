@@ -23,7 +23,7 @@
     <style name="QuestionInput" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:paddingLeft">20dp</item>
+        <item name="android:layout_marginLeft">20dp</item>
     </style>
     <style name="CheckQuestion" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="android:layout_width">match_parent</item>
@@ -42,5 +42,12 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:orientation">vertical</item>
         <item name="android:paddingLeft">30dp</item>
+    </style>
+    <style name="OrderButton" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:layout_marginLeft">30sp</item>
     </style>
 </resources>

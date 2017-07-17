@@ -13,5 +13,6 @@
     <string name="gandalf">Gandalf</string>
     <string name="onering">The One ring</string>
     <string name="allrings">All the rings</string>
+    <string name="submit">submit score</string>
 
 </resources>
