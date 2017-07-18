@@ -41,7 +41,11 @@ public void submitScore (View view){
     boolean question6 = ring.isChecked();
 
     Score = calculateScore(question1, moria_pass, question3a, question3b, frodo_surname, question5, question6);
-    Toast.makeText(this, "Your final score is " + Score, Toast.LENGTH_LONG).show();
+    if (Score > 3)
+    Toast.makeText(this, "Well done! Your final score is " + Score, Toast.LENGTH_LONG).show();
+    else {
+        Toast.makeText(this, "It would be better to read the books again! Your final score is " + Score, Toast.LENGTH_LONG).show();
+    }
 }
 private int calculateScore (boolean q1, String q2, boolean q3a, boolean q3b, String q4, boolean q5, boolean q6) {
     int Score2 = 0;
